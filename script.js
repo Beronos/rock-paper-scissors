@@ -13,7 +13,7 @@ const gameWinner = document.getElementById("game-winner")
 player.textContent = "Player Score : " + playerScore;
 computer.textContent = "Computer Score: " + computerScore;
 
-const buttons = document.querySelectorAll('button.btn');
+const buttons = document.querySelectorAll('img.btn');
 
 
 
@@ -59,17 +59,10 @@ function computerPlay(){
 
 function playRound(){
     computerSelection=computerPlay();
-    let result="";
-
     if(playerSelection === computerSelection){
-        result =  "It is a draw. You both played " + playerSelection + ".";
-
-        whoWon.textContent = result;
+        draw();
         return;
     }
-    
-
-
     const mergedSelection = playerSelection + computerSelection;
     
     switch(mergedSelection){
@@ -94,6 +87,11 @@ function playRound(){
 
 }
 
+const draw = () =>{
+    whoWon.textContent = "It is a draw. You both played " + playerSelection + ".";
+
+    
+}
 
 const win = ()=>{
     whoWon.textContent = "You won! " +  capitalize(playerSelection) +" beats "+ computerSelection + " .";

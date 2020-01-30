@@ -1,0 +1,25 @@
+.center{
+    text-align: center;
+    font:'Roboto';
+    color:#f1fcfc
+}
+
+html{
+    background-color: #72b5b7;
+}
+
+.buttons{
+    text-align:center;
+    margin-top:8.5%;
+}
+
+.btn{
+    width:20%;
+    height:25%;
+    background-color:#72b5b7;
+    padding-left:2%;
+}
+
+.results{
+    text-align:center;
+}
